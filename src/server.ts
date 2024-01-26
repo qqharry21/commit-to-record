@@ -11,6 +11,7 @@ import rateLimiter from '@common/middleware/rateLimiter';
 import requestLogger from '@common/middleware/requestLogger';
 import { getCorsOrigin } from '@common/utils/envConfig';
 import { healthCheckRouter } from '@modules/healthCheck/healthCheckRouter';
+import { recordRouter } from '@modules/record/recordRouter';
 import { userRouter } from '@modules/user/userRouter';
 
 dotenv.config({
@@ -31,6 +32,7 @@ app.use(requestLogger());
 
 // Routes
 app.use('/health-check', healthCheckRouter);
+app.use('/record', recordRouter);
 app.use('/users', userRouter);
 
 // Swagger UI

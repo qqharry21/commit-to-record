@@ -20,7 +20,12 @@ export const healthCheckRouter: Router = (() => {
   });
 
   router.get('/', (_req: Request, res: Response) => {
-    const serviceResponse = new ServiceResponse(ResponseStatus.Success, 'Service is healthy', null, StatusCodes.OK);
+    const serviceResponse = new ServiceResponse(
+      ResponseStatus.Success,
+      'Service is healthy',
+      null,
+      StatusCodes.OK
+    );
     handleServiceResponse(serviceResponse, res);
   });
 

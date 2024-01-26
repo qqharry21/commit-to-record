@@ -1,8 +1,10 @@
 {
   "trailingComma": "es5",
   "tabWidth": 2,
-  "printWidth": 120,
+  "printWidth": 100,
   "singleQuote": true,
+  "endOfLine": "lf",
+  "singleAttributePerLine": true,
   "semi": true,
   "overrides": [
     {
